@@ -287,7 +287,7 @@ void construction() {
     // Test non-conversion pointer construction
     { static_assert(!std::is_convertible<Clonable*, mongo::clonable_ptr<Clonable>>::value, ""); }
 
-    // Test conversion unique pointer construction
+    // Test conversion unique pointer construction.
     {
         static_assert(
             std::is_convertible<std::unique_ptr<Clonable>, mongo::clonable_ptr<Clonable>>::value,
